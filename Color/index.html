@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color</title>
+    <style>
+        body{
+            text-align: center;
+            font-size: 100px;
+        }
+        
+        button{
+            font-size: 50px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all ease 0.5s;
+        }
+
+        button:hover{
+            transform: scale(1.1);
+            background-color: skyblue;
+        }
+        </style>
+</head>
+<body>
+    <p>Color Changer</p>
+    <p><span class="text">#F5f423</span></p>
+    <button id="btn">Button</button>
+
+    <script>
+        const colors = [0, 1, 2, 3, 4, 5, 6, 7, 'A', 'B', 'C', 'D', 'E', 'F', 'G'];
+        const btn = document.getElementById("btn");
+        const color = document.querySelector(".text");
+
+        btn.addEventListener("click", function(){
+            let hexColor = "#";
+            for(let i = 0; i < 6; i++){
+                hexColor += colors[random()];
+            }
+            color.textContent = hexColor;
+            document.body.style.backgroundColor = hexColor;
+        })
+
+        function random(){
+            return Math.floor(Math.random() * colors.length);
+        }
+    </script>
+</body>
+</html>

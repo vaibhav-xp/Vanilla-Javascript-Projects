@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans Mono', monospace;
+}
+
+body{
+    background: linear-gradient(to top right, #cc99ff 0%, #66ccff 100%);
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 58vw;
+    transition: all 0.3s ease;
+}
+
+.header{
+    padding: 40px;
+    font-size: 2rem;
+    color: black;
+   
+}
+
+h1{
+    transition: all ease 0.5s;
+    width: 100%;
+}
+
+h1:hover{
+    transform: scale(0.9);
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    grid-gap: 20px;
+}
+
+
+.project-container{
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.image{
+    width: 480px;
+    height: 360px;
+    border-radius: 20px;
+    overflow: hidden;
+    object-fit:fill;
+}
+
+a:link{
+    color: black;
+    text-decoration: none;
+}
+
+a:visited{
+    color: black;
+    text-decoration: none;
+}
+
+.image img{
+    width: 600px;
+    transition: all 0.7s ease;
+
+}
+
+.image img:hover{
+    transform: scale(1.2);
+
+}
+
+.info{
+    margin-top: 15px;
+}
+
+.info h4{
+    font-size: 1.4rem;
+}
+
+@media screen and (max-width: 1024px){
+    .container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 790px){
+    h1{
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .main{
+        width: 100vw;
+    }
+
+    .project-container{
+        width: 300px;
+        overflow: hidden;
+    }
+
+    .image{
+        width: 300px;
+        overflow: hidden;
+    }
+
+    .image img{
+        width: 480px;
+    }
+
+    h1{
+        font-size: 1.5rem;
+    }
+
+
+}
+
