@@ -17,12 +17,16 @@ This project aims to simplify and guide the way beginners make their first contr
 
 #### If you don't have git on your machine, [install it](https://help.github.com/articles/set-up-git/).
 
-## Step 1 :- Fork this repository
+## Step 1 :- Add your name
+
+Add your name to contributors.md file.
+
+## Step 2 :- Fork this repository
 
 Fork this repository by clicking on the fork button on the top of this page.
 This will create a copy of this repository in your account.
 
-## Step 2 :- Clone the repository
+## Step 3 :- Clone the repository
 
 <img align="right" width="300" src="https://firstcontributions.github.io/assets/Readme/clone.png" alt="clone this repository" />
 
@@ -46,7 +50,7 @@ git clone https://github.com/this-is-you/first-contributions.git
 
 where `this-is-you` is your GitHub username. Here you're copying the contents of the first-contributions repository on GitHub to your computer.
 
-## Step 3 :- Create a branch
+## Step 4 :- Create a branch
 
 Change to the repository directory on your computer (if you are not already there):
 
@@ -66,7 +70,7 @@ For example:
 git switch -c add-alonzo-church
 ```
 
-## Step 4 :- Make necessary changes and commit those changes
+## Step 5 :- Make necessary changes and commit those changes
 
 Now open `Contributors.md` file in a text editor, add your name to it. Don't add it at the beginning or end of the file. Put it anywhere in between. Now, save the file.
 
@@ -88,7 +92,7 @@ git commit -m "Add your-name to Contributors list"
 
 replacing `your-name` with your name.
 
-## Step 5 :- Push changes to GitHub
+## Step 6 :- Push changes to GitHub
 
 Push your changes using the command `git push`:
 
@@ -109,13 +113,13 @@ replacing `your-branch-name` with the name of the branch you created earlier.
 
 </details>
 
-## Step 6:- Submit your changes for review
+## Step 7:- Submit your changes for review
 
 If you go to your repository on GitHub, you'll see a `Compare & pull request` button. Click on that button.
 
 <img style="float: right;" src="https://firstcontributions.github.io/assets/Readme/compare-and-pull.png" alt="create a pull request" />
 
-## Step 7:- Now submit the pull request.
+## Step 8:- Now submit the pull request.
 
 <img style="float: right;" src="https://firstcontributions.github.io/assets/Readme/submit-pull-request.png" alt="submit pull request" />
 
