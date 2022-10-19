@@ -1,0 +1,154 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  /* --bg-color:#c8e2eb;
+    background-color:var(--bg-color); */
+  /* background-image: linear-gradient(to bottom right, #c8e2eb, #e0cae6); */
+}
+.bold{
+  font-weight: 700;
+}
+.sketch {
+  font-family: "Cabin Sketch", cursive;
+}
+.pen {
+  font-family: "Nanum Pen Script", cursive;
+}
+.flex {
+  display: flex;
+}
+.flex-column {
+  flex-direction: column;
+}
+.flex-row {
+  flex-direction: row;
+}
+.grid {
+  display: grid;
+}
+.align-center {
+  align-items: center;
+}
+.text-center {
+  text-align: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.bg-color {
+  /* background-image: linear-gradient(to bottom right, #c8e2eb, #e0cae6); */
+  background-image: url(blackboard.jpg);
+}
+.p-color {
+  color: whitesmoke;
+  /* background-image: linear-gradient(to bottom right,#498de763, #498de7); */
+}
+
+.s-color {
+  background-image: linear-gradient(to bottom right, #8a7edd, #5d51b630);
+}
+
+/* .glass-effect{
+background: rgba(255, 255, 255, 0.1);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(9.7px);
+-webkit-backdrop-filter: blur(9.7px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+} */
+/* ------------------------------------------ */
+section {
+  height: 90vh;
+  width: 100vw;
+}
+header {
+  font-size: 50px;
+  margin: 5px;
+  text-align: center;
+}
+.note-list-all-notes {
+  align-items: center;
+  border-right: 1px solid white;
+  height: 100%;
+}
+.note-list-head {
+  border-radius: 5px;
+  font-size: 2rem;
+}
+.note-list {
+  margin: 5px;
+  border-radius: 15px;
+  width: 25%;
+}
+.note-list-title {
+  padding: 5px;
+  text-align: center;
+  font-size: 30px;
+  width: 100%;
+}
+.note-area {
+  margin: 5px;
+  padding: 8px;
+  width: 75%;
+}
+
+ul {
+  text-decoration: none;
+}
+
+.note-list-head {
+  margin: 8px;
+  height: 7vh;
+  width: 94%;
+}
+.content {
+  flex-wrap: wrap;
+}
+.note-content {
+  width: 380px;
+  aspect-ratio: 2;
+  margin: 10px 15px 10px 15px;
+  font-size: 20px;
+}
+textarea.note-content {
+  background: rgba(255, 255, 255, 0);
+  margin: 5px 0px 0px 0px;
+  padding: 10px 5px 5px 5px;
+}
+#add-button {
+  height: 25vh;
+  aspect-ratio: 1;
+  background: rgba(255, 255, 255, 0);
+  font-size: 20vh;
+  font-weight: 100;
+  padding: 5px;
+  margin-top: 10px;
+  border: none;
+}
+button {
+  font-size: 25px;
+  margin: 4px 2px 2px 2px;
+}
+.button {
+  background: rgba(255, 255, 255, 0);
+  border: none;
+}
+.delete {
+  border: none;
+
+  background: rgba(255, 255, 255, 0);
+  height: auto;
+  aspect-ratio: 1;
+}
+.button img,
+.delete img {
+  height: 30px;
+  aspect-ratio: 1;
+}
+.note-title{
+  width: 100%;
+  padding: 10px 0px 0px 10px;
+  font-family: "Cabin Sketch", cursive;
+  background: rgba(255, 255, 255, 0);
+  font-size: 20px;
+}

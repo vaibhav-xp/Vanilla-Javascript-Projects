@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin+Sketch&family=Nanum+Pen+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="responsive.css">
+    <script src="burger.js" defer></script>
+    <title>Document</title>
+  </head>
+
+  <body class="bg-color">
+    <header class="p-color sketch flex justify-center">Notepad</header>
+    <section class="flex">
+      <aside class="note-list">
+        <div class="note-list-top">
+          <div class="note-list-title p-color sketch">Note List</div>
+          <div class="burger ">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </div>
+        <div class="note-list-all-notes p-color pen flex flex-column">
+          <li class="note-list-head" id="li-0">Note 0</li>
+          
+        </div>
+      </aside>
+
+      <main class="note-area">
+        <div class="note-list-title p-color sketch">All Notes</div>
+        <div class="content p-color pen flex" id="textarea">
+          <div class="note-content">
+            <button class="button p-color pen " id="reset-0"> Reset </button>
+
+            <button class="delete p-color pen" id="delete-0">Delete</button>
+            <button class="button p-color pen " id="copy-0"> Copy Text </button>
+            <textarea name="" class="pen p-color sketch note-title" placeholder="Enter Title"  id="title-0" ></textarea>
+            <textarea class="note-content pen p-color  " placeholder="Enter Notes" id="clear-0" ></textarea>
+            
+
+          </div>
+         
+        </div>
+        <div id="app">
+            <button class="add-note p-color" type="button" id="add-button">+</button>
+        </div>
+        
+      </main>
+    </section>
+    <footer></footer>
+    <script src="style.js"></script>
+    <script>
+        const note = document.querySelector(".note-list-all-notes")
+        const element = document.getElementById("textarea")
+        const addbutton = document.getElementById("add-button")
+       
+
+        document.querySelector("#copy-0").addEventListener('click',(event)=>{
+          const copiedText=document.querySelector(`#clear-${event.target.id.slice(-1)}`).value;
+          navigator.clipboard.writeText(copiedText);
+          console.log("copied text is ",navigator.clipboard.value)
+          window.alert("note copied !")
+        })
+
+
+        // var selectedText=document.querySelector("#clear-0").setSelectedText()
+
+        var noteTitle=document.querySelector("#title-0");
+        console.log(noteTitle);
+        noteTitle.addEventListener('input',(event)=>{
+          document.querySelector(`#li-${event.target.id.slice(-1)}`).textContent=event.target.value;
+        })
+
+        var del=document.querySelector('#delete-0');
+        del.addEventListener('click',(event)=>{
+          document.querySelector(`#li-${event.target.id.slice(-1)}`).remove();
+          console.log("del clicked")
+          event.target.parentNode.remove();
+        })
+
+        var reset=document.querySelector('#reset-0');
+        reset.addEventListener('click',(event)=>{
+          console.log(event.target.id.slice(-1)); 
+          document.querySelector(`#clear-${event.target.id.slice(-1)}`).value="";
+        })
+
+        var c=1;
+        addbutton.addEventListener("click",function(){
+          var new_li=document.createElement('li')
+          new_li.setAttribute('class','note-list-head')
+          new_li.setAttribute('id',`li-${c}`)
+          new_li.innerHTML=`Note ${c}`
+
+
+        var new_div= document.createElement('div');
+        new_div.setAttribute('class', 'note-content');
+        new_div.innerHTML = `
+        <button class="button  p-color pen" id="reset-${c}"> reset </button>
+        <button class="delete  p-color pen" id="delete-${c}" >delete</button>
+        <button class="button p-color pen " id="copy-${c}"> copy text </button>
+        
+        <textarea name="" class="pen p-color note-title" placeholder="Enter Title"  id="title-${c}" ></textarea>
+        <textarea class="note-content p-color sketch " id="clear-${c}" ></textarea>
+        ` 
+        element.appendChild(new_div) 
+        note.appendChild(new_li)
+
+        document.querySelector(`#copy-${c}`).addEventListener('click',(event)=>{
+          const copiedText=document.querySelector(`#clear-${event.target.id.slice(-1)}`).value;
+          navigator.clipboard.writeText(copiedText);
+          console.log("copied text is ",navigator.clipboard.value)
+          window.alert("note copied !")
+        })
+
+        document.querySelector(`#title-${c}`).addEventListener('input',(event)=>{
+          console.log("keydown")
+          document.querySelector(`#li-${event.target.id.slice(-1)}`).textContent=event.target.value;
+        })
+        
+        document.querySelector(`#delete-${c}`).addEventListener('click',(event)=>{
+          document.querySelector(`#li-${event.target.id.slice(-1)}`).remove();
+          // console.log(`#li-${event.target.id.slice(-1)}`);
+          document.querySelector(`#li`)
+
+          event.target.parentNode.remove();
+        });
+        document.querySelector(`#reset-${c}`).addEventListener('click',(event)=>{
+          console.log(event.target.id.slice(-1)); 
+          document.querySelector(`#clear-${event.target.id.slice(-1)}`).value="";
+          
+        })
+        document.querySelector(`#title-${c}`).focus();
+        c++; 
+        });
+
+		
+    </script>
+  </body>
+</html>
