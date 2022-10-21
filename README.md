@@ -6,7 +6,15 @@
 
 
 </p>
+<div align="center">
+    
+![Issues](https://img.shields.io/github/issues/vaibhav-xt/Vanilla-Javascript-Projects?color=brightgreen)
+![Pull requests](https://img.shields.io/github/issues-pr/vaibhav-xt/Vanilla-Javascript-Projects?color=brigthgreen)
+![forks](https://img.shields.io/github/forks/vaibhav-xt/Vanilla-Javascript-Projects)
+![stars](https://img.shields.io/github/stars/vaibhav-xt/Vanilla-Javascript-Projects)
 
+
+</div>
 # How to contribute:
 
 This project aims to simplify and guide the way beginners make their first contribution. If you are looking to make your first contribution, follow the steps below.
@@ -125,7 +133,14 @@ If you go to your repository on GitHub, you'll see a `Compare & pull request` bu
 
 Soon I'll be merging all your changes into the main branch of this project. You will get a notification email once the changes have been merged.
 <br><br><br>
-     
+ 
+## Contributing
+
+To contribute to the program collection, fork the repository, create a new branch and send us a pull request. Make sure you read [CONTRIBUTING.md](https://github.com/vaibhav-xt/Vanilla-Javascript-Projects/blob/master/.github/CONTRIBUTING.md) before sending us Pull requests.
+
+### Special thanks to all the contributors✨
+
+[![Contributors](https://contrib.rocks/image?repo=vaibhav-xt/Vanilla-Javascript-Projects)](https://github.com/vaibhav-xt/Vanilla-Javascript-Projects/graphs/contributors) 
 
 ## <strong> Rules </strong>
 
