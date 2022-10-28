@@ -70,10 +70,12 @@ header {
   align-items: center;
   border-right: 1px solid white;
   height: 100%;
+  word-break: break-all;
 }
 .note-list-head {
   border-radius: 5px;
   font-size: 2rem;
+  margin-bottom: 3px;
 }
 .note-list {
   margin: 5px;
@@ -98,7 +100,6 @@ ul {
 
 .note-list-head {
   margin: 8px;
-  height: 7vh;
   width: 94%;
 }
 .content {
