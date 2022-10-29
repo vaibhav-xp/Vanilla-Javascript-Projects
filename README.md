@@ -133,7 +133,27 @@ If you go to your repository on GitHub, you'll see a `Compare & pull request` bu
 
 Soon I'll be merging all your changes into the main branch of this project. You will get a notification email once the changes have been merged.
 <br><br><br>
- 
+
+## What really is Vanilla JavaScript?
+
+Vanilla is when something does not have any special or extra features; it is ordinary , pure or standard.
+
+Vanilla script is the word used to describe pure JavaScript that does not include any other libraries. It is one of the lightest weight frameworks ever.Both learning and using it are really simple and easy. 
+
+The vanilla script can be used to develop major and impactful applications as well as websites.
+
+### Why should you learn vanilla JS as a beginner?
+
+* You won't regret spending your valuable time learning Vanilla JavaScript.Not only does it contains the word vanilla, but it will have a beneficial impact on programming skills.
+
+* If you research the term “vanilla JavaScript”, you might run into some confusion; however, all you need to know is that vanilla JavaScript is used to refer to the native, standards-based, non-extended version. 
+  
+* There is no difference between vanilla JavaScript and JavaScript, it’s just there to emphasize the usage of plain JavaScript without the use of libraries and frameworks.
+
+* Compared to many other programming languages, JavaScript offers one of the more beginner-friendly entry points into the world of coding.
+  
+* The great thing about it is that it comes installed on every modern web browser—there’s no need to set up any kind of development environment, which means you can start coding with JavaScript right away!
+
 ## Contributing
 
 To contribute to the program collection, fork the repository, create a new branch and send us a pull request. Make sure you read [CONTRIBUTING.md](https://github.com/vaibhav-xt/Vanilla-Javascript-Projects/blob/master/.github/CONTRIBUTING.md) before sending us Pull requests.
