@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: rgb(0, 183, 255);
+}
+
+
+.container{
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 
+    5px 15px 25px rgba(0, 0, 0, 0.3);
+    border: 2px solid black;
+    border-radius: 12px;
+    padding: 20px;
+    height: 500px;
+    width: 400px;
+    gap: 10px;
+}
+
+input, button{
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 12px;
+    transition: 0.2s all;
+}
+
+button:active{
+    transform: scale(0.95);
+    background-color: rgb(0, 183, 255);
+    color:white;
+}
+
+div div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+
+
