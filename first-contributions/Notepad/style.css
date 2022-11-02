@@ -5,7 +5,7 @@
     background-color:var(--bg-color); */
   /* background-image: linear-gradient(to bottom right, #c8e2eb, #e0cae6); */
 }
-.bold{
+.bold {
   font-weight: 700;
 }
 .sketch {
@@ -110,6 +110,7 @@ ul {
   aspect-ratio: 2;
   margin: 10px 15px 10px 15px;
   font-size: 20px;
+  resize: none;
 }
 textarea.note-content {
   background: rgba(255, 255, 255, 0);
@@ -146,10 +147,11 @@ button {
   height: 30px;
   aspect-ratio: 1;
 }
-.note-title{
+.note-title {
   width: 100%;
   padding: 10px 0px 0px 10px;
   font-family: "Cabin Sketch", cursive;
   background: rgba(255, 255, 255, 0);
   font-size: 20px;
+  resize: none;
 }
