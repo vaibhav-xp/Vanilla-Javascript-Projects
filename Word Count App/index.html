@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- stylesheets -->
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- Bootstrap Links -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+  <!-- scripts -->
+  <script src="./app.js" defer></script>
+
+  <title>Word Counter App</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Word Counter</h1>
+    <label for="textarea">Enter some text below:</label>
+    <textarea class="form-control" name="textarea" id="textarea" cols="30" rows="10"></textarea>
+    <div id="stat">You've written <span class="words-count h6">0 words</span> and <span class="characters-count h6">0
+        characters</span> .</div>
+  </div>
+</body>
+
+</html>

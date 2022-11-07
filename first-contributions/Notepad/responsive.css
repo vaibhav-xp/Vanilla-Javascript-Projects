@@ -1,0 +1,69 @@
+.note-list-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.burger{
+    margin: 3px;
+    display: none;
+
+
+}
+.line{
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background: rgb(255, 255, 255);
+    border-radius: 1px;
+}
+
+
+@media screen and (width<578px){
+    .flex{
+        flex-direction: column;
+    }
+    .note-area{
+        width: 96%;
+        margin: 2%;
+        margin: 0px 0px 0px 0px;
+    }
+    .note-content{
+        width: 99%;
+        margin: 5px 5px 5px 5px;
+    }
+    .key{
+        display: flex;
+        justify-content: center;
+    }
+    .button{
+        margin:0px 10px ;
+    }
+    /* aside tag resp css */
+    .note-list{
+        width: 96%;
+        margin: 2%;
+        
+    }
+    .note-list-head {
+        margin: 5px 0px 0px 25px;
+        height: 4vh;
+        width: 100%;
+    }
+    .note-list-all-notes{
+        display: none;
+        border-right: none;
+       
+        margin: 10px 0px 10px 0px;
+    }
+    .burger{
+        display: block;
+    }
+    .note-title,textarea.note-content{
+        width: 95%;
+    }
+    #add-button {
+        height: 15vh;
+        font-size: 10vh;
+    }
+    
+}
