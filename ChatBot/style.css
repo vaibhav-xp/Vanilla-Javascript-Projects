@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&family=Open+Sans&family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(21, 84, 131);
+    background: linear-gradient(90deg, rgba(21, 84, 131, 1) 0%, rgba(202, 111, 212, 1) 94%);
+}
+
+section {
+    width: 500px;
+    min-height: 80vh;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.471);
+}
+
+.header {
+    background: rgb(21, 84, 131);
+    background: linear-gradient(90deg, rgba(21, 84, 131, 1) 0%, rgba(150, 6, 255, 1) 98%);
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    height: 90px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 1rem 0 2rem;
+    font-weight: bold;
+    font-size: 1.8rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.471);
+}
+
+.header span i {
+    font-size: 3rem;
+    position: relative;
+    top: .5rem;
+}
+
+.main {
+    height: calc(80vh - 170px);
+    position: relative;
+    padding: 2rem;
+    overflow-y: scroll;
+}
+
+.main::-webkit-scrollbar {
+    width: 5px;
+}
+
+.main::-webkit-scrollbar-thumb {
+    background: rgb(21, 84, 131);
+    background: linear-gradient(0deg, rgba(21, 84, 131, 1) 0%, rgba(150, 6, 255, 1) 98%);
+}
+
+.main p {
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: rgb(0, 28, 81);
+    max-width: 70%;
+    box-shadow: 10px 5px 10px rgba(0, 28, 81, 0.663);
+}
+
+.main div {
+    margin-bottom: 2rem;
+    display: flex;
+}
+
+.left {
+    justify-content: flex-start;
+}
+
+.right {
+    justify-content: flex-end;
+}
+
+.right p {
+    background-color: rgba(150, 6, 255, 1);
+    box-shadow: 10px 5px 10px rgba(150, 6, 255, .3);
+}
+
+.footer {
+    height: 90px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    padding: 0 2rem 0 2rem;
+}
+
+input {
+    height: 3rem;
+    outline: none;
+    width: 80%;
+    padding: 0 .5rem 0 .5rem;
+    border-radius: 999px;
+    color: rgb(0, 28, 81);
+    border: 2px solid rgb(0, 28, 81);
+}
+
+input::placeholder {
+    color: rgb(0, 28, 81);
+}
+
+.button {
+    height: 50px;
+    gap: .5rem;
+    width: 50px;
+    background-color: rgb(0, 28, 81);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.button i {
+    color: white;
+}
+
+.button:hover {
+    background-color: white;
+}
+
+.button:hover i {
+    color: rgb(0, 28, 81);
+}
+
+.button:hover i:active {
+    transform: scale(1.1);
+}
