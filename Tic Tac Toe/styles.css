@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+html {
+    background: linear-gradient(rgb(0, 162, 255), skyblue);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.winner {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    color: rgb(204, 5, 81);
+    font-size: 2rem;
+    font-weight: bold;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    width: 400px;
+    height: 500px;
+    border-radius: 20px;
+}
+
+.container h1 {
+    font-size: 2rem;
+    margin: 2rem 0 0 0;
+}
+
+.container h3 {
+    margin: 1rem 0 1rem 0;
+    color: green;
+}
+
+.container h3 span {
+    color: red;
+}
+
+.tic-toe-container {
+    background-color: skyblue;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+}
+
+.tic-toe-container .boxes {
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tic-toe-container .boxes:hover {
+    background-color: white;
+}
+
+.container button {
+    margin: 1rem 0 1rem 0;
+    padding: .5rem 1rem .5rem 1rem;
+    background-color: skyblue;
+    border: none;
+    border-radius: 9999px;
+    font-size: 1rem;
+    box-shadow: 1px 5px 10px skyblue;
+}
+
+.container button:hover {
+    background-color: rgb(77, 168, 204);
+}
+
+.tic-toe-bar {
+    content: "";
+    background-color: red;
+    position: absolute;
+    width: 0;
+    height: 5px;
+    transition: width .3s ease-in-out;
+}

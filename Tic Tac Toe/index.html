@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Tic Tac Toe</h1>
+        <h3>Chance: <span class="player-name"></span></h3>
+        <div class="tic-toe-container">
+            <div class="boxes box-1"></div>
+            <div class="boxes box-2"></div>
+            <div class="boxes box-3"></div>
+            <div class="boxes box-4"></div>
+            <div class="boxes box-5"></div>
+            <div class="boxes box-6"></div>
+            <div class="boxes box-7"></div>
+            <div class="boxes box-8"></div>
+            <div class="boxes box-9"></div>
+            <div class="tic-toe-bar"></div>
+        </div>
+        <button onclick="reset()">Reset</button>
+    </div>
+    <script>
+        const boxes = document.querySelectorAll('.boxes');
+        const playerName = document.querySelector('.player-name');
+        const tic_bar = document.querySelector('.tic-toe-bar');
+        let chance = "X";
+        let winFlag = false;
+
+        if (playerName.innerText === "") {
+            playerName.innerText = `Player ${chance}`;
+        }
+
+        const winKey = [
+            {
+                blocks: [0, 1, 2],
+                deg: "0deg",
+                top: "15%",
+                left: "10%"
+            },
+            {
+                blocks: [3, 4, 5],
+                deg: "0deg",
+                top: "50%",
+                left: "10%"
+            },
+            {
+                blocks: [6, 7, 8],
+                deg: "0deg",
+                top: "83%",
+                left: "10%"
+            },
+            {
+                blocks: [0, 3, 6],
+                deg: "90deg",
+                top: "50%",
+                left: "-25%",
+            },
+            {
+                blocks: [1, 4, 7],
+                deg: "90deg",
+                top: "50%",
+                left: "10%"
+            },
+            {
+                blocks: [2, 5, 8],
+                deg: "90deg",
+                top: "50%",
+                left: "45%"
+            },
+            {
+                blocks: [0, 4, 8],
+                deg: "45deg",
+                top: "50%",
+                left: "10%"
+            },
+            {
+                blocks: [2, 4, 6],
+                deg: "-45deg",
+                top: "50%",
+                left: "10%"
+            }
+        ];
+
+        const boxClickHandler = (e) => {
+            const box = e.target;
+            if (box.innerText === "" && !winFlag) {
+                box.innerText = chance;
+                chance = turnChance();
+                playerName.innerText = `Player ${chance}`;
+                checkWin();
+            } else if (!winFlag) {
+                box.style.backgroundColor = "#fcb8b8";
+                setTimeout(() => {
+                    box.style.backgroundColor = "skyblue";
+                }, 5000);
+            }
+        };
+
+        boxes.forEach((box) => {
+            box.addEventListener('click', boxClickHandler);
+        });
+
+        const turnChance = () => {
+            return chance === "X" ? "O" : "X";
+        };
+
+        const checkWin = () => {
+            winKey.forEach((key) => {
+                if ((boxes[key.blocks[0]].innerText === 'O' && boxes[key.blocks[1]].innerText === "O" && boxes[key.blocks[2]].innerText === "O") || (boxes[key.blocks[0]].innerText === 'X' && boxes[key.blocks[1]].innerText === "X" && boxes[key.blocks[2]].innerText === "X")) {
+                    winFlag = true;
+                    tic_bar.style.transform = `rotate(${key.deg})`;
+                    tic_bar.style.top = key.top;
+                    tic_bar.style.left = key.left;
+                    tic_bar.style.width = "80%";
+                    tic_bar.style.width = "width .3s ease-in-out";
+                    winnerDisplay(false);
+                    setTimeout(() => {
+                        reset();
+                        tic_bar.style.width = "0%";
+                    }, 5000)
+                }
+            });
+        };
+
+        const winnerDisplay = (n) => {
+            if (n) {
+                document.querySelector(".winner").remove();
+            } else {
+                const h1 = document.createElement('div');
+                h1.classList.add('winner')
+                h1.innerText = `Player ${chance === "X" ? "O" : "X"} is Winner`;
+                const container = document.querySelector('body');
+                const firstChild = container.querySelector('.container');
+                container.insertBefore(h1, firstChild);
+            }
+
+        }
+
+        const reset = () => {
+            boxes.forEach((box) => {
+                box.innerText = "";
+            });
+            winFlag = false;
+            if (document.querySelector(".winner")) winnerDisplay(true);
+            playerName.innerText = `Player ${chance}`;
+            tic_bar.style.width = "0%";
+            boxes.forEach((box) => {
+                box.addEventListener('click', boxClickHandler);
+            });
+        };
+
+    </script>
+</body>
+
+</html>
