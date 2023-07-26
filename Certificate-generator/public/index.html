@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certification</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+
+    <!-- Candidate Detail -->
+    <form id="form">
+        <h1>Certificate</h1>
+        <div class="course">
+            <span>Course:</span>
+            <select name="course" id="course" class="course" required>
+                <option value=""></option>
+                <option value="Web Development">Web Development</option>
+                <option value="Android Development">Android Development</option>
+                <option value="Competitive Programming">Competitive Programming</option>
+            </select>
+        </div>
+
+        <div class="name">
+            <span>Name: </span>
+            <input type="text" placeholder="name" required id="name">
+        </div>
+
+        <div class="date">
+            Start: <input type="date" name="" id="start-date" required>
+            End: <input type="date" name="" id="end-date" required>
+        </div>
+        <div>
+            <button>Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+
+
+    <!-- Certificate -->
+
+    <main id="main">
+        <div class="container">
+
+            <div class="certificate-header">
+                <h1>Emulation<span></h1>
+                <h4 id="date_conatiner">Internship Conducted Between (<span id="startDate"></span> To <span
+                        id="endDate"></span>)</h4>
+            </div>
+
+            <div class="certificate-main" id="form">
+                <p>This certificate is awarded to</p>
+                <h4 class="candidate-name" id="candidate_name"></h4>
+                <p>in appreciation of your successful completion of intership of the position of<b><span
+                            class="candidate_course" id="subject"></span></b>at Olcademy.</p>
+
+                <p class="sign">director sign</p>
+                <div class="hr"></div>
+                <h6>Director Name</h6>
+                <h5>Executive Director, Emulation</h5>
+
+                <img class="full_logo" src="image/full_logo.png" alt="Emulation">
+            </div>
+        </div>
+
+        <button id="btn" class="button">Download</button>
+    </main>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.js"></script>
+    <script src="./Javascript/certificate.js"></script>
+</body>
+
+</html>
